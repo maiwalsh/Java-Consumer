@@ -1,1 +1,1 @@
-Hello World Java Application
+Deployment Config for Hello-World-JavaA and Hello-World-JavaB.

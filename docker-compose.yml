@@ -1,5 +1,10 @@
 services:
-  java-app:
-    image: maiwalsh/hello-world-java:latest
-    container_name: hello-world-java
+  java-appA:
+    image: maiwalsh/hello-world-javaA:latest
+    container_name: hello-world-javaA
+    restart: unless-stopped
+  
+  java-appB:
+    image: maiwalsh/hello-world-javaB:latest
+    container_name: hello-world-javaB
     restart: unless-stopped
