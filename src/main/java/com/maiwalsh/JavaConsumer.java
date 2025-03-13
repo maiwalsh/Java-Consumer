@@ -1,4 +1,4 @@
-package src.main.java.com.maiwalsh;
+package com.maiwalsh;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import java.time.Duration;
