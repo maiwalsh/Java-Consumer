@@ -1,10 +1,11 @@
+package src.main.java.com.maiwalsh;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class HelloWorldConsumer {
+public class JavaConsumer {
     public static void main(String[] args) {
         String topic = "test-topic"; // Set your Kafka topic
 
