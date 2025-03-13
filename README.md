@@ -1,1 +1,1 @@
-Hello World Java(B) Application Code.
+Java Consumer Application Code.
