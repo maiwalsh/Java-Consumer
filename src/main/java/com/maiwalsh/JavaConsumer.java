@@ -7,11 +7,17 @@ import java.util.Properties;
 
 public class JavaConsumer {
     public static void main(String[] args) {
+        String kafkaBroker = System.getenv("CONFLUENT_BROKER_SERVER");
+        
+        if (kafkaBroker == null || kafkaBroker.isEmpty()) {
+            System.err.println("Missing required environment variable: CONFLUENT_BROKER_SERVER");
+            System.exit(1);
+        }
         String topic = "test-topic"; // Set your Kafka topic
 
         // Kafka consumer configuration
         Properties properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "confluent-broker.recrocog.com:9092"); // Kafka broker address
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBroker);
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test-group");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
